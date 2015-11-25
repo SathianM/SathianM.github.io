@@ -16,7 +16,7 @@
          "Multicultural Sensivity",
          "Managing Priorities"
      ],
-     "biopic": "images/me.jpg",
+     "biopic": "images/Me.jpg",
      "display": function() {
 
          var formattedRole = HTMLheaderRole.replace("%data%", this.role);
