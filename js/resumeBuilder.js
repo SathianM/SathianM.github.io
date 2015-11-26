@@ -18,7 +18,6 @@
      ],
      "biopic": "images/Me.jpg",
      "display": function() {
-
          var formattedRole = HTMLheaderRole.replace("%data%", this.role);
          var formattedName = HTMLheaderName.replace("%data%", this.name);
          var formattedWmsg = HTMLwelcomeMsg.replace("%data%", this.welcomeMessage);
@@ -66,7 +65,9 @@
              "location": "paris",
              "dates": "2000-2005",
              "description": "If you live long enough, you'll make mistakes.But if you learn from them, you'll be a better person. It's how you handle adversity, not how it affects you. The main thing is never quit, never quit, never quit.[William J. Clinton]"
-         }, {
+         },
+
+         {
              "employer": "Sathian Books",
              "title": "Publisher",
              "location": "zurich",
@@ -90,7 +91,7 @@
          $("h2").css({
              padding: 0
          });
-         for (item = 0; item < work.jobs.length; item++) {
+         for (var item = 0; item < work.jobs.length; item++) {
              var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[item].employer);
              var FormattedTitle = HTMLworkTitle.replace("%data%", work.jobs[item].title);
              var formattedDates = HTMLworkDates.replace("%data%", work.jobs[item].dates);
@@ -128,7 +129,7 @@
          var NewClassName = document.getElementById("projects").className;
          NewClassName = NewClassName + " center-content clear-fix";
          document.getElementById("projects").className = NewClassName;
-         for (item = 0; item < projects.project.length; item++) {
+         for (var item = 0; item < projects.project.length; item++) {
              var FormattedTitle = HTMLprojectTitle.replace("%data%", projects.project[item].title);
              var formattedDates = HTMLprojectDates.replace("%data%", projects.project[item].dates);
              var formattedDescription = HTMLprojectDescription.replace("%data%", projects.project[item].description);
@@ -192,7 +193,7 @@
          var NewClassName = document.getElementById("education").className;
          NewClassName = NewClassName + " center-content clear-fix";
          document.getElementById("education").className = NewClassName;
-         for (item = 0; item < education.schools.length; item++) {
+         for (var item = 0; item < education.schools.length; item++) {
              var formattedName = HTMLschoolName.replace("%data%", education.schools[item].name);
              var formattedDegree = HTMLschoolDegree.replace("%data%", education.schools[item].degree);
              var formattedDates = HTMLschoolDates.replace("%data%", education.schools[item].dates);
